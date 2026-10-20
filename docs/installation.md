@@ -530,6 +530,20 @@ See [the Cordis patch and launcher setup](client-configuration.md#deepseek-harne
 
 See [OpenCode, Grok Build, and Grok Bot settings](client-configuration.md#other-client-settings).
 
+### Agent workflow harnesses (RECC)
+
+REA supplies analysis tools and Evidence; a workflow harness can supply the
+planning, testing, and review steps around them. RECC is the
+reverse-engineering module of the Everything Claude Code (ECC) harness. It
+adds agents, skills, and commands that drive REA's MCP tools (investigate,
+compare versions, clean-room rebuild, parity check) and an opt-in hook that
+logs REA calls and Evidence IDs to a project-local `.recc/` directory.
+
+RECC consumes REA as a version-pinned package and does not change how REA is
+installed or registered. Register REA with the setup command above for the
+same client, then install ECC with its `recc` profile. RECC's documentation
+lives in that repository at `docs/RECC.md`.
+
 ## Hopper
 
 Hopper is separate commercial software with its own license. Its free demo has
